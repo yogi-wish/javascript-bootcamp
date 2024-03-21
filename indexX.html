@@ -1,0 +1,1585 @@
+<!-- let and const -->
+const myEgg = 4
+myEgg += 2 //error
+let myEgg = 4
+myEgg += 2 // 6
+
+<!-- // unary operator -->
+mysong++ ,myFav--
+<!-- string -->
+"My name is yogi"
+
+<!-- string method -->
+property.method()
+
+let buggi ="Surfin USA"
+buggi.toUpperCase() // "SURFIN USA"
+buggi.toLowerCase()
+buggi.length // 10
+let myname =" jnfsnnfnfdn "
+myname.trim()
+'jnfsnnfnfdn'
+myname.length
+15
+myname[3]
+'f'
+myname.toLowerCase()
+' jnfsnnfnfdn '
+myname.toUpperCase()
+' JNFSNNFNFDN '
+
+<!-- string method 2 -->
+property.methods(arg)
+
+let tvShow = 'catdog';
+tvShow.indexOf('cat')
+0
+tvShow.indexOf('dog')
+3
+tvShow.indexOf('z')
+-1 // if string not include that characterso it give -1 value
+
+"baseball".indexOf('b')
+0
+"Baseball".indexOf('b')
+4
+let sport = 'Baseball'
+sport.slice(4) // its make the copy of array and then slice it.
+'ball'
+sport.slice(5)
+'all'
+sport
+'Baseball'
+"superHero".slice(0,5) // end not included.
+'super'
+"superHero".slice(5,7)
+'He'
+
+"Baseball is entertaining".replace("entertaining","Ok")
+'Baseball is Ok'
+"ha ha ha".replace("ha","hee")
+'hee ha ha'
+"ha ha ha".replaceAll("ha","hee")
+'hee hee hee'
+
+<!-- Quiz -->
+"GARBAGE!".slice(2).replace("B"," ")
+'R AGE!'
+let age= "5"+"4"
+age
+'54'
+let userInput =" TODD@gail.com"
+let cleanedInput =userInput.trim().toLocaleLowerCase()
+cleanedInput
+'todd@gail.com'
+let yell = "go away!!"
+
+let index = yell.indexOf("!")
+index
+7
+
+<!-- String escapes -->
+\n -> newline
+\' -> single quote
+\"-> double quote
+\\ backslash
+
+"he said I ain\'t happy"
+>"he said I ain't happy"
+"he said, \"I am happy\""
+>'he said, "I am happy"'
+"\\"
+>'\'
+
+"\"
+VM2525:1 Uncaught SyntaxError: Invalid or unexpected token
+
+<!-- string tempelate literals -->
+<!-- use back-tick ` ` character and ${} -->
+
+`you owe me ${100+13}`
+'you owe me 113'
+
+'you owe me ${10+2}'
+'you owe me ${10+2}'
+
+let animal= "pig";
+let sound= "oink";
+`${animal} says ${sound}`
+'pig says oink'
+animal + " says " + sound
+'pig says oink'
+`${animal} says ${sound.toUpperCase()}`
+'pig says OINK'
+let elapsedTime =14
+undefined
+let user = 'XYZ'
+undefined
+`posted ${elapsedTime} minutes ago by ${user}`
+'posted 14 minutes ago by XYZ'
+
+<!-- null and undifind -->
+null is intational abesence of any value
+undefined is variable that do not have an assigned value
+
+<!-- math object -->
+collection of math's functionality
+
+Math
+Math {abs: ƒ, acos: ƒ, acosh: ƒ, asin: ƒ, asinh: ƒ, …}
+Math.PI
+3.141592653589793
+Math.floor(4.582220)
+4
+Math.round(5.45)
+5
+Math.round(17.62)
+18
+Math.pow(2,5)
+32
+Math.random() // generate random value between 0 and 1 // use in dice roller
+0.11247247152045836
+Math.random()
+0.6632702082316968
+Math.random()
+0.050059166660692433
+Math.random()*6
+2.5167544888967046
+Math.random()*6
+1.8578647327437126
+Math.random()*6
+2.2709550394380322
+Math.random()*6
+3.6460037497477544
+(Math.random()*6)+1
+4.889199044143258
+Math.floor(Math.random()*6)
+1
+
+<!-- 'typeOf' operator -->
+
+typeof 50
+'number'
+typeof cancelAnimationFrame
+'function'
+typeof true
+'boolean'
+typeof "bag"
+'string'
+typeof null
+'object'
+typeof undefined
+'undefined'
+typeof w
+undefined
+
+<!-- parseInt and parseFloat -->
+
+parseInt("33")
+33
+parseInt("33.575")
+33
+parseInt("28 days late 1")
+28
+parseInt("28dayslater")
+28
+parseFloat("33")
+33
+parseFloat("hello")
+NaN
+parseFloat("44.5782")
+44.5782
+
+<!-- comparision operator -->
+<!-- >,<,>=, <=,==equality //it does not care about type you are comparing with !=not equality===strictly equality // its
+        care about the type of variable you are comparing // go with triple equal always!! !==strictly not equality //
+        go with this operator always not with !='a'>'b'
+        false
+        'A'> 'a'
+        false
+        'A'< 'a' true 'B' < 'a' true '#' <'$' true 4==4 true 7=="7" true 0=='' true 0==false true null==undefined true
+            5===5 true 5==='5' false 0===false false 1!=='1' true 1!='1' false
+            
+            
+            
+            
+<--ARRAYS -->
+
+let shoppingList = ['cereal','cheese','ice'];
+
+shoppingList[2]= 'milk';
+shoppingList now is
+(3) ['cereal', 'cheese', 'milk']
+
+shoppingList[shoppingList.length]= 'ice cream'
+shoppingList now is
+(4) ['cereal', 'cheese', 'milk', 'ice cream']
+
+
+let myCollection = [12,'dog',null, true,NaN] // mixed array
+
+myCollection.length // 5
+
+myCollection[myCollection.length -4] //'dog'
+
+<!-- Push and Pop -->
+Push- add to end
+Pop - remove from end
+Shift - remove from start
+Unshift - add to start
+
+let shoppingList1 = ['cereal','cheese','ice'];
+undefined
+shoppingList1.push('milk')
+4
+shoppingList1
+(4) ['cereal', 'cheese', 'ice', 'milk']
+let myCollection1 = [12,'dog',null, true,NaN]
+undefined
+myCollection1.pop()
+NaN
+myCollection1
+(4) [12, 'dog', null, true]
+myCollection1.shift()
+12
+myCollection1
+(3) ['dog', null, true]
+myCollection1.unshift('butter')
+4
+myCollection1
+(4) ['butter', 'dog', null, true]
+
+<!-- more methods in arrays -->
+concat - merge arrays
+includes - look for a value
+indexOf - just like str.indexOf
+join - creates a stirng from arrays
+reverse - reverse an array
+slice - copy portion of an array
+splice- remove/replace elements
+sort - sorts an array // its overwrite the original array.
+
+<!-- # concat -->
+let veggie = ['beans','potato'];
+let fruit = ['banana','apple']
+console.log(fruit.concat(veggie));
+(4) ['banana', 'apple', 'beans', 'potato']
+console.log(veggie.concat(fruit));
+(4) ['beans', 'potato', 'banana', 'apple']
+console.log(veggie.concat(veggie));
+(4) ['beans', 'potato', 'beans', 'potato']
+
+let meats=['chicks','mutton']
+let allFood = fruit.concat(veggie,meats);
+allFood
+(6) ['banana', 'apple', 'beans', 'potato', 'chicks', 'mutton']
+
+<!-- #  includes and indexOf -->
+let arr =[2,3,5,8,6];
+arr.includes(5) // it return the boolean value
+true
+arr.includes(9)
+false
+arr.indexOf(8)
+3
+arr.indexOf(10)
+-1 // element not present in the array, it return value is -1
+// includes and indexOf is used to check wheater the value are there in the array or not
+if(arr.indexOf(6)!== -1)
+if (arr.includes(3)== true)
+
+<!-- # join and reverse -->
+let letter = ['A','B','C','D','E'];
+letter.reverse()
+['E', 'D', 'C', 'B', 'A']
+letter
+['E', 'D', 'C', 'B', 'A']
+letter.join()
+'E,D,C,B,A'
+letter.reverse().join()
+'A,B,C,D,E'
+letter.join('')
+'ABCDE'
+letter.join('-')
+'A-B-C-D-E'
+letter.join('#')
+'A#B#C#D#E'
+
+<!-- #slice --> // return a mutated array
+
+let animals = ['shark','salmon','whale','bear','lizard','tortoise'];
+let swimmers = animals.slice(0,3)
+swimmers
+['shark', 'salmon', 'whale']
+let mammals = animals.slice(2,4)
+mammals
+['whale', 'bear']
+let quadruped = animals.slice(-3)
+quadruped
+['bear', 'lizard', 'tortoise']
+animals.slice()
+['shark', 'salmon', 'whale', 'bear', 'lizard', 'tortoise']
+let copy = animals.slice()
+copy
+['shark', 'salmon', 'whale', 'bear', 'lizard', 'tortoise']
+
+<!-- #splice --> // it also mutated the array.
+// it is use to insert in between or remove/replace
+
+
+let animals = ['shark','salmon','whale','bear','lizard','tortoise'];
+animals.splice(1,0,'octopus')
+[]
+animals
+(7) ['shark', 'octopus', 'salmon', 'whale', 'bear', 'lizard', 'tortoise']
+
+let animals = ['shark','salmon','whale','bear','lizard','tortoise'];
+animals.splice(3,2)
+(2) ['bear', 'lizard']
+animals.splice(3,0,"snake",'frog')
+[]
+animals
+(6) ['shark', 'salmon', 'whale', 'snake', 'frog', 'tortoise']
+animals.splice(0,1,'SHARK')
+['shark']
+animals
+(6) ['SHARK', 'salmon', 'whale', 'bear', 'lizard', 'tortoise']
+
+<!-- # sort  -->
+// it convert the elements in string and short with there character order
+
+let animals = ['shark','salmon','whale','bear','lizard','tortoise'];
+animals.sort()
+(6) ['bear', 'lizard', 'salmon', 'shark', 'tortoise', 'whale']
+let num = [4,10,45,88,62,1000,9]
+num.sort()
+(7) [10, 1000, 4, 45, 62, 88, 9]
+
+<!-- # reference -->
+
+let fruit = "Orange";
+let color = fruit;
+fruit
+'Orange'
+color
+'Orange'
+fruit = "mango"
+'mango'
+color
+'Orange'
+fruit
+'mango
+//here we store a value of variable. In primitive type variable we create a value type variable and actual
+value is stored in memory but in case of arrays where we have thousand's of information in them so instead
+of storing value in variable itself, it stores the reference of that array.
+when we worked with arrays variable do not hold the array, it holds a arrow or reference or pointer to where
+the array in memory
+
+let num = [5,6,7,8,9];
+let otherNum =num;
+num.pop()
+9
+num
+(4) [5, 6, 7, 8]
+otherNum
+(4) [5, 6, 7, 8]
+// here if we change num, the otherNum is also get changed.
+
+<!-- # const in arrays -->
+
+in primitive variable if we define that variable with const we can not alter the value stored in that
+variable but in arrays we konw that the value stored in arrays as reference or pointer so we can apply the
+methods like push and pop to alter the elements in that array dynamically. So because of this we use const with
+arrays further.
+const num = 5;
+undefined
+num +=5;
+VM3955:1 Uncaught TypeError: Assignment to constant variable
+const myEggs = ['red','purple']
+myEggs.push('pink')
+3
+myEggs
+(3) ['red', 'purple', 'pink']
+myEggs = []
+Uncaught TypeError:
+
+<!-- # nested arrays // we use in multidimensional arrays  -->
+
+const animalPairs = [['doe','duck'],['ewe','ram'],['peahen','peacock']]
+animalPairs
+(3) [Array(2), Array(2), Array(2)]
+0: (2) ['doe', 'duck']
+1: (2) ['ewe', 'ram']
+2: (2) ['peahen', 'peacock']
+length: 3
+[[Prototype]]: Array(0)
+animalPairs[2][0]
+'peahen'
+animalPairs[1][1]
+'ram'
+animalPairs[0][1] ='stag'
+'stag'
+animalPairs
+(3) [Array(2), Array(2), Array(2)]
+0: (2) ['doe', 'stag']
+1: (2) ['ewe', 'ram']
+2: (2) ['peahen', 'peacock']
+length: 3
+
+<!-- # objects -->
+/*Objects are collection of properties.
+properties are a key-value pair
+rater than accessing data using an index, we use custom keys .
+key is known as property.*/
+
+const fitbitData = {
+totalSteps: 308727,
+totalMiles: 211.7,
+avgCalorieBurn: 5755,
+workoutThisWeek: '5 to7',
+avgGoodSleep: '2:13'
+}
+
+fitbitData.totalMiles
+211.7
+fitbitData.avgCalorieBurn
+5755
+
+const numbers = {
+100: 'one hundred',
+16: 'sixteen'
+
+};
+numbers.100
+SyntaxError: Unexpected number
+numbers[100]
+'one hundred'
+
+const palette = {
+red: '#eb4d4b',
+yellow: '#f9ca24',
+blue: '#30336b'
+}
+let mystryColor = 'yellow';
+palette.mystryColor
+undefined
+palette[mystryColor]
+'#f9ca24
+
+const userReview = {};
+userReview.mrSmith =3.5;
+userReview['queenBee'] = 5;
+userReview
+{mrSmith: 3.5, queenBee: 5}
+
+userReview.mrSmith += 2;
+userReview['queenBee']++;
+userReview
+{mrSmith: 5.5, queenBee: 6}
+
+<!-- nested arrays & objects -->
+const students = {
+firstName: 'David',
+lastName: 'Jones',
+strengts: ['music','art'],
+exams: {
+midterm: 92,
+final: 88
+}
+}
+const avg = (students.exams.midterm + student.exams.final) / 2
+avg
+90
+students.strengts[1]
+'art'
+
+<!-- object structure of tic tac toe game -->
+const game = {
+player1: {
+userName : 'smith',
+playingWith: 'X'
+}
+player2: {
+userName: 'bixy',
+playingWith: '0'
+}
+board : [['0','null','X'],['null','X','0'],['0','X','null']]
+}
+
+<!-- // objects are also stored in memory as reference type just like arrays. -->
+
+const nums = [1,2,3];
+const mystry = [1,2,3];
+
+let moreNums = nums;
+nums === mystry
+false
+nums == mystry
+false
+nums === moreNums
+true //here two arrays reference the exact same array, so it is true.
+
+<!-- World of  LOOPS  -->
+
+<!-- 
+for,while, for...of,for...in
+
+const myStudents =[
+{
+firstName:'henery',
+grades: 86
+},
+{
+firstName:'jhon',
+grades: 97
+},
+{
+firstName:'wills',
+grades: 74
+}
+
+]
+
+ for(i=0;i< myStudents.length;i++){
+    let student=myStudents[i];
+    console.log(`${student.firstName} scored ${student.grades}`) } 
+    // henery scored 86 168 jhon scored 97 168 wills scored 74 
+    // while and for loops are same in some way but we use while loop where we are not certain about how many times our loop we run. Below is the example of target and guess. 
+    
+    const target=Math.floor(Math.random()*10); 
+    let guess=Math.floor(Math.random()*10);
+    while(guess!==target){ 
+    console.log(`target: ${target} guess: ${guess}`); 
+    guess=Math.floor(Math.random()*10); 
+    }
+    console.log(`target: ${target} guess: ${guess}`); 
+    // target: 5 guess: 2 app.js:174 
+    target: 5 guess: 9 app.js:174
+    target: 5 guess: 8 app.js:174 
+    target: 5 guess: 0 app.js:174 
+    target: 5 guess: 1 app.js:174 
+    target: 5 guess: 3 app.js:177 
+    target: 5 guess: 5 -->
+
+<!-- break statement -->
+const target = Math.floor(Math.random()*10);
+let guess = Math.floor(Math.random()*10);
+while(true){
+if(guess == target){
+break;
+}
+console.log(`target: ${target} guess: ${guess}`);
+guess = Math.floor(Math.random()*10);
+}
+console.log(`target: ${target} guess: ${guess}`);
+//target: 3 guess: 6
+app.js:187 target: 3 guess: 1
+app.js:187 target: 3 guess: 9
+app.js:187 target: 3 guess: 0
+app.js:187 target: 3 guess: 9
+app.js:190 target: 3 guess: 3
+
+<!-- for... of loops -->
+
+let subreddits = ['soccer','popheads','cringe','books'];
+for(let sub of subreddits){
+console.log(sub);
+}
+//soccer
+popheads
+cringe
+books
+
+for(let char of "alksdvnklvskjc"){
+console.log(char);
+}
+//a
+l
+k
+s
+d
+v
+n
+k
+l
+v
+s
+k
+j
+c
+
+<!-- const magicSquare = [[2,7,6,],[9,5,1],[4,3,8]];
+for(let i =0; i < magicSquare.length;i++){
+     let row=magicSquare[i]; 
+     // console.log(magicSquare[i]); 
+     let sum=0; 
+     for(let j=0;j<row.length;j++){ 
+        sum=sum + row[j];
+     } 
+     console.log(`${row} summed=${sum}`);
+    } 
+    // 2,7,6 summed=15 
+    9,5,1 summed=15
+    4,3,8 summed=15
+
+    for(let row of magicSquare){
+         let sum=0; 
+        for(let num of row){ 
+            sum=sum + num;
+        }
+        console.log(`${row} summed=${sum}`);
+    } 
+    // 2,7,6 summed=15
+     9,5,1 summed=15 
+     4,3,8 summed=15  -->
+
+
+<!-- for...of in objects -->
+
+const movieReviews = {
+arrival: 9.5,
+alien: 9,
+amelie: 8,
+'in bruges':9,
+amadeus :10,
+'kill bill':8,
+};
+
+for(let movie of Object.keys(movieReviews)){
+console.log(movie, movieReviews[movie]);
+}
+
+//arrival 9.5
+alien 9
+amelie 8
+in bruges 9
+amadeus
+10
+kill bill 8
+
+
+let ratings = Object.values(movieReviews);
+let r;
+let total = 0;
+for(r of ratings){
+total = total + r;
+
+}
+let avg = total/ratings.length;
+console.log(avg);
+// 8.9166
+
+<!-- for.. in loops -->
+// It's a loop basically used for object to extract keys and values. although it also used in array
+but it gives the indexes of array not the values.
+
+const movieReviews = {
+arrival: 9.5,
+alien: 9,
+amelie: 8,
+'in bruges':9,
+amadeus :10,
+'kill bill':8
+}
+for(let movie in movieReviews){
+console.log(movie);
+console.log(movieReviews[movie]);
+};
+// arrival
+app.js:256 9.5
+app.js:255 alien
+app.js:256 9
+app.js:255 amelie
+app.js:256 8
+app.js:255 in bruges
+app.js:256 9
+app.js:255 amadeus
+app.js:256 10
+app.js:255 kill bill
+app.js:256 8
+
+
+
+
+<!-- Functions -->
+function name(){
+//do something
+}
+
+function rollDice(){
+let roll = Math.floor(Math.random()*6+1);
+console.log(roll);
+}
+// rollDice()
+app.js:264 4
+rollDice()
+app.js:264 5
+rollDice()
+app.js:264 6
+
+function throwDice(){
+rollDice(); // function call
+rollDice();
+rollDice();
+}
+// throwDice()
+app.js:264 1
+app.js:264 1
+app.js:264 3
+
+function greet(nickname){
+console.log(`hi ${nickname}`);
+// console.log(nickname);
+}
+// greet('Tim')
+app.js:275 hi Tim
+
+function divide(x,y){
+console.log(x/y);
+}
+//divide(8,2)
+app.js:281 4
+
+<!-- return value -->
+arr = ['pink','magenta','yellow','purple'];
+function containPurple(arr){
+for(let color of arr){
+if(color === 'purple' || color === 'magenta'){
+return true;
+}
+}
+return false;
+}
+//containPurple(['pink','magenta','yellow','purple'])
+true
+
+<!-- # password validator -->
+
+<!-- (password must be 8 character and not content spaces and username)
+
+function isValidPassword(password, userName) {
+if (password.length < 8 || password.indexOf(' ') !== -1 ||
+        password.indexOf(userName) !== -1)
+    {
+        return false;
+    }
+    return true;
+}
+// isValidPassword(' azcdv','xyz') false 
+isValidPassword('ajksdfb kanc','sjdv') false
+isValidPassword('ASDFG123','ASDF') false 
+isValidPassword('asdefefn12','djbfjjdf') true  
+-->
+
+
+<!-- Panagram -->
+
+A Panagram contains all letters of english alphabets.
+'The five boxing wizards jump quickly'
+<!-- 
+function isPanagram(sentence){
+    let lowercased = sentence.toLowerCase();
+    for(let char of "abcdefghijklmnopqrstuvwxyz"){
+        if(lowercased.indexOf(char)===-1){
+        return false;
+        }
+    return true;
+}
+// or
+function isPanagram(sentence){
+    let lowercased = sentence.toLowerCase();
+    for(let char of "abcdefghijklmnopqrstuvwxyz"){
+        if(!lowercased.includes(char)){
+        return false;
+        }
+    }
+    return true;
+} -->
+//isPanagram('The five boxing wizards jump quickly')
+true
+
+<!-- get card  -->
+it is function of random card drawn from pack of value and suits in the from of Objects.
+
+function getCard(){
+const values =['2','3','4','5','6','7','8','9','10','J','K','Q','A'];
+const i = Math.floor(Math.random()* values.length);
+const value = values[i];
+const suits = ['clubs','spades','hearts','diamonds'];
+const j =Math.floor(Math.random()* suits.length);
+const suit = suits[j]
+return {value : value ,suit : suit};
+}
+// getCard()
+{value: '9', suit: 'spades'}
+getCard()
+{value: '7', suit: 'diamonds'}
+getCard()
+{value: 'K', suit: 'spades'}
+getCard()
+{value: 'K', suit: 'spades'}
+
+<!-- Scope -->
+The variable and the function is written inside the { } curly braces is known as scope.
+let and const is limited to the scope but var is not limited to scope. we can access var outside
+the scope.
+function scope - whatever written in between function.
+block scope- whatever written in condition or loops.
+
+lexical scope- it is usually seen in nested function where the inner function is lexically
+bounded with outer function and if we call the inner function it will take the parant function's
+defined variable and execute.
+The inner function first look the variable inside itself if variable is not declared inside this scope than
+it goes to outer function and so on..
+<!-- 
+function outer(){
+    let movie = 'amendues';
+    function inner(){
+        console.log(movie.toUpperCase());
+    }
+    inner();
+} -->
+// AMENDUES
+
+
+<!-- function expression -->
+a function in javascript can be stored in variable because a function is treated as object in
+javascript.
+function add(x,y){
+return x+y;
+}//add(4,5)
+9
+
+const sum = function (x,y){
+return x+y;
+}
+// sum(8,6)
+14
+<!-- 
+const add = function (x,y){
+return x+y;
+}
+const subtract = function (x,y){
+return x-y;
+}
+const multiply = function (x,y){
+return x*y;
+}
+const divide = function (x,y){
+return x/y;
+}
+const operations = [ add,subtract,multiply,divide];
+// operations
+(4) [ƒ, ƒ, ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)2: ƒ (x,y)3: ƒ (x,y)length: 4[[Prototype]]: Array(0)
+operations[1]
+ƒ (x,y){
+return x-y;
+}
+//
+operations[2](5,6)
+30 
+-->
+
+
+
+<!-- **********higer order function************  -->
+<!--
+function call(f){
+f();
+f();
+f();
+f();
+}
+
+function cry(){
+console.log("HOO UOO i am very sad!")
+}
+function rage(){
+console.log("I hate everything!")
+}
+//call(cry)
+HOO UOO i am very sad!
+HOO UOO i am very sad!
+HOO UOO i am very sad!
+HOO UOO i am very sad!
+
+
+function pickOne(f1,f2){
+    let pick = Math.random();
+    console.log(pick);
+    if(pick <= 0.5){
+        return f1(); 
+    } else{ 
+        return f2(); 
+    } 
+} 
+// pickOne(cry,rage) 0.17650433880440075 HOO UOO i am very sad! -->
+
+
+<!-- function as return values -->
+here with function we create factory and we derieve so many function from the factory.
+
+<!-- function inBetweenFunc(min,max){
+return function(num){
+if (num> min && num <= max){ return true; } else { return false; } } } const isChild=inBetweenFunc(0,18); const
+    isGoodWeather=inBetweenFunc(18,24) // isChild(15) true isChild(22) false isGoodWeather(19) true  -->
+
+
+<!-- callback -->
+<!-- 
+    function grumpus(){
+    alert('GAAH GO AWAY!')
+    }
+    setTimeout(function(){
+    alert('Welcome!')
+    },5000);
+
+    const btn = document.querySelector('button');
+    btn.addEventListener("click",function(){
+    alert('Why did you click me?')
+    }) -->
+
+<!-- Hoisting -->
+If we declare variable with var before or after its initialization it will work but
+incase of let and const you have to initialize the variable before it's excution. This
+means that var is hoisted but let and const are not.
+in case of function you can declare the function before or after because function is
+hoisted anywhere.
+
+console.log(animal);
+var animal ="lion";
+console.log(animal);
+// undefined
+lion
+
+console.log(shrimp);
+const shrimp = "Harlequin";
+console.log(shrimp);
+// ReferenceError: Cannot access 'shrimp' before initialization
+
+howl();
+function howl(){
+console.log('AWOOOOOOOO!')
+}
+howl();
+// AWOOOOOOOO!
+AWOOOOOOOO!
+
+<!-- Section 10 Array callback methods -->
+<!-- forEach method -->
+Here we callback the elements of array with different method but we use forEach method. it mutat the parent array.
+more.
+
+const numbers = [10,20,30,40,50,60];
+
+numbers.forEach(function(i,id){
+console.log(id,i * 2);
+});
+or
+function double(i){
+console.log(i*2);
+}
+numbers.forEach(double);
+or
+for(let i of numbers){
+console.log(i*2);
+}
+//
+20 40 60 80 100 120
+<!-- Map method -->
+
+map method is very useful to map an array of number or string in to a new array and our
+parent array will remain same.
+
+const numbers = [20,21,22,23,24,25,26,27,28];
+const numDetails = numbers.map((i)=>{
+if(i % 2 === 0){
+return{
+value : i,
+isEven: true
+}
+}
+else{
+return {
+value : i,
+isEven : false
+}
+}
+})
+// numDetails
+(9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {value: 20, isEven: true}
+1: {value: 21, isEven: false}
+2: {value: 22, isEven: true}
+3: {value: 23, isEven: false}
+4: {value: 24, isEven: true}
+5: {value: 25, isEven: false}
+6: {value: 26, isEven: true}
+7: {value: 27, isEven: false}
+8: {value: 28, isEven: true}
+
+const words = ['asap','byob','rsvp','diy'];
+let readable =words.map((word)=>{
+return word.toUpperCase().split('').join('.')
+})
+// readable
+(4) ['A.S.A.P', 'B.Y.O.B', 'R.S.V.P', 'D.I.Y']
+
+<!-- arrow function -->
+const square = function (x){
+return x * x;
+}
+//or Arrow function
+const square = (x)=>{
+return x * x;
+}
+// square(4)
+16
+const add = (x,y)=>{
+return x+y;
+}
+// add(5,4)
+9
+const greet = ()=>{
+console.log('Hi')
+}// Hi
+
+<!-- implicit return in arrow function -->
+The implicit return work for simple function an we can easily write the arrow function
+in single line without writing return and curly braces{}.
+basically this implicit return is use to a simple function in on line, but it is not
+used in if any conditional or loop is used.
+const square0 = function (x){
+return x * x;
+}
+//or
+const square1 = (x)=>{
+return x * x;
+}
+// or
+const square2 = (x) => x*x;
+// square1(4) = square2(4) = 16
+
+const arr = [1,2,3,4,5,6,7,8,9];
+const double1= arr.map(function(x){
+return x*2;
+})
+//or
+double2= arr.map((x)=>x*2);
+// double2
+(9) [2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+<!-- array.find -->
+This method is used to find the value in the array. if the value found out once the
+function stops and not look for other same value.(find only gives the first match.)
+let movies = [
+'The fantastic Mr. fox',
+'Mr. and Mrs. smith',
+'Mrs. doubtfire',
+'Mr. deeds'
+]
+
+const finder1 = movies.find((movie) => {
+return movie.includes('Mrs');
+})
+//finder1
+'Mr. and Mrs. smith'
+
+const finder2 = movies.find(movie => movie.indexOf('Mrs.')=== 0);
+// finder2
+'Mrs. doubtfire'
+
+<!-- array.filter -->
+As the name suggest it filter out the elements from an array if condition is true.
+const nums = [34,35,67,54,109,102,32,9];
+const odd= nums.filter(n => n % 2 === 1);
+const bigNum = nums.filter(n => n>50);
+//odd
+(4) [35, 67, 109, 9]
+bigNum
+(4) [67, 54, 109, 102]
+
+<!-- some and every -->
+These both methods are boolean method. It gives true or flase value.
+
+const words = ["dog",'dig','bag','big','pag'];
+
+const all3Letter = words.every((word) => word.length ===3);
+const lastLetG = words.every(letter => letter[letter.length -1] === "g");
+//or
+const lastLetG= words.every(function(word){
+const last = word.length - 1;
+return word[last] === 'g';
+});
+// all3Letter
+true
+lastLetG
+true
+
+const wordStartWithD = words.some(word => word[0].toLowerCase() === 'd');
+const allStartWithD = words.every(word => word[0].toLowerCase() === 'd');
+// wordStartWithD
+true
+allStartWithD
+false
+That is the basic diffrence in some and every.
+
+<!-- *******************revisiting sort method************************ -->
+
+<!-- Sort callback method is the in the few method of array which mutat the original array.
+Sort method we have seen earlier but the simple sort, sorts the element into by making
+string which is not the proper sort in case of numbers, but the sort with function with
+condition (a-b) sort the array in ascending or descending order.
+As we know sort method mutat the original array so we use slice method with integration
+with sort which make copy of an array before slice it.
+if a-b > 0 ; Then it sort b before a.
+if a-b < 0 ; then it sort a bebore b. 
+
+const prices=[400.5,3000,99.99,35.99,12.00,9500];
+ const badSort = prices.slice().sort(); 
+ const ascSort=prices.slice().sort((a,b)=> a-b);
+const desSort = prices.slice().sort((a,b) => b-a);
+    // badSort
+    (6) [12, 3000, 35.99, 400.5, 9500, 99.99]
+    ascSort
+    (6) [12, 35.99, 99.99, 400.5, 3000, 9500]
+    desSort
+    (6) [9500, 3000, 400.5, 99.99, 35.99, 12] -->
+
+
+<!-- reduce -->
+
+Reduce is use to reduce the in one value. It is mainly use to find the max and min
+element of array.
+
+syntax - arr.reduce(() => {},intial value). intial value is optional.
+
+const arr = [2,3,4,5,6,7,8];
+
+const arrMult = arr.reduce((accumulater, currentValue) => {
+return accumulater * currentValue;
+}) // 2*3*4*5*6*7*8 =
+const arrSum = arr.reduce((accumulater, currentValue) => {
+return accumulater + currentValue;
+}, 1) // arrSum = 36
+// we can also give the initial value by putting comma after curly braces.
+
+ex.2
+const grades = [87,65,76,99,52,89,96,77];
+
+const maxGrade = grades.reduce((max,currVal) => {
+if(currVal > max){
+return currVal;
+}
+else{
+return max;
+}
+}) // maxGrade = 99
+// or
+
+<!-- const maxGrade = grades.reduce((max,currVal) => {
+    return Math.max(max,currVal)
+})
+const minGrade = grades.reduce((min,currVal) => {
+if(currVal < min){ return currVal; } else{ return min; } }) 
+// minGrade=52 
+
+const votes=['y','y','n','y','y','n', 'n','n','y','y','n','y','y','n','n'];
+ const results=votes.reduce((tally,val)=> {
+    if(tally[val]){
+    tally[val]++;
+    } else{
+    tally[val] =1;
+    }
+    return tally;
+    }, {})
+    // results
+    {y: 8, n: 7} -->
+
+<!-- section 11  -->
+
+<!-- default parameter -->
+Order of parameter matters in default parameter. All the default parameter comes
+in end of the parameter list.
+function multiply(x,y){
+if (typeof y === 'undefined'){
+y=1;
+}
+return x*y;
+}
+// multiply(4)
+4
+multiply(4,5)
+20
+// or
+function multiply1(x,y=1){
+return x*y;
+}
+// multiply1(4,5)
+20
+
+const blah = (x,y = [1,2,3]) => {
+console.log(x,y);
+}
+// blah(1)
+1 (3) [1, 2, 3]
+undefined
+blah(1,3)
+1 3
+undefined
+blah(1,4)
+1 4
+undefined
+
+<!-- Spread for function call -->
+Math.max(44,85,4,7,2,45,88,6,42,5)
+88
+Math.min(44,85,4,7,2,45,88,6,42,5)
+2
+const nums =[ 44,85,4,7,2,45,88,6,42,5]
+undefined
+Math.max(nums)
+NaN
+Math.max(...nums) // here ... is used to spread the array in multiple arguments
+88
+
+function giveMeFour(a,b,c,d){
+console.log(1,a);
+console.log(2,b);
+console.log(3,c);
+console.log(4,d);
+}
+
+const color = ['green','yellow','red','blue'];
+// giveMeFour(color)
+1 (4) ['green', 'yellow', 'red', 'blue']0: "green"1: "yellow"2: "red"3:
+"blue"length: 4[[Prototype]]: Array(0)
+2 undefined
+3 undefined
+4 undefined
+undefined
+giveMeFour(...color)
+1 'green'
+2 'yellow'
+3 'red'
+4 'blue'
+
+
+const cephalopods = ['dumbo octopus', 'humboldt squid', 'flamboyant
+cuttlefish'];
+
+const gastropods = ['giant african snail', 'banana slug', 'variable neon slug'];
+
+const cnidaria = ['fire coral', 'moon jelly'];
+
+
+const mollusca = [...cephalopods, ...gastropods]
+//["dumbo octopus", "humboldt squid", "flamboyant cuttlefish", "giant african
+snail", "banana slug", "variable neon slug"]
+
+const inverts = [...cnidaria, ...gastropods, ...cephalopods]
+//["fire coral", "moon jelly", "giant african snail", "banana slug", "variable
+neon slug", "dumbo octopus", "humboldt squid", "flamboyant cuttlefish"]
+
+const cephCopy = [...cephalopods];
+//["dumbo octopus", "humboldt squid", "flamboyant cuttlefish"]
+
+split do the same work as spread do in case of string.
+'abcdefgh'.split('')
+(8) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+[...'abcdefgh']
+(8) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
+const feline = {
+legs : 4,
+family : 'Felidae'
+};
+
+const canine = {
+family: 'Caniae',
+furry : true,
+legs : 4
+};
+
+const dog = {
+...canine,
+isPet : true,
+adorable : true
+}
+// dog
+{family: 'Caniae',
+furry: true,
+legs: 4,
+isPet: true,
+adorable: true}
+
+const catDog = {
+...canine,
+...feline
+}
+// catDog
+{family: 'Felidae', furry: true, legs: 4}
+// Here we can see that the object is updated not added. Whenever we have
+conflicting properties in object, order also matter in object that which
+key-value pair is written last.
+When we spread a object we generally do it to change property.
+{...[]} - that is not iterable.
+
+<!-- rest  -->
+
+<!-- destructuring -->
+const raceResults = [
+'Eliud Kipchoge',
+'Feyisa Lelisa',
+'Galen Rupp',
+'Ghirmay Ghebreslassie',
+'Alphonce Simbu',
+'Jared Ward'
+];
+
+// The old way:
+// const gold = raceResults[0]
+// const silver = raceResults[1]
+// const bronze = raceResults[2]
+
+// Using Destructuring:
+const [gold, silver, bronze] = raceResults;
+gold; //'Eliud Kipchoge'
+silver; //'Feyisa Lelisa'
+bronze; //'Galen Rupp'
+
+const [first, , , fourth] = raceResults;
+first; //'Eliud Kipchoge'
+fourth; //'Ghirmay Ghebreslassie'
+
+const [winner, ...others] = raceResults;
+winner; //'Eliud Kipchoge'
+others; //["Feyisa Lelisa", "Galen Rupp", "Ghirmay Ghebreslassie", "Alphonce
+Simbu", "Jared Ward"]
+
+const runner = {
+first : "Eliud",
+last : "Kipchoge",
+country : "Kenya",
+title : "Elder of the Order of the golden Heart of Kenya"
+}
+
+//const { first,last } = runner;
+// first 'Eliud' last 'Kipchoge'
+
+const { country : nation} = runner;
+// country reference error
+// nation "Kenya"
+
+const { first,last,...other } = runner;
+// other {country: 'Kenya', title: 'Elder of the Order of the golden Heart of
+Kenya'}
+
+
+const results = [{
+first: "Eliud",
+last: "Kipchoge",
+country: "Kenya",
+},
+{
+first: 'Feyisa',
+last: 'Lilesa',
+country: 'Ethiopia'
+},
+{
+first: 'Galen',
+last: 'Rupp',
+country: 'United States'
+}
+]
+
+// NESTED DESTRUCTURING
+const [{ first: goldWinner}, { country}] = results;
+goldWinner; //"Eliud"
+country; //"Ethiopia"
+
+// Destructuring Parameter
+
+const runner = {
+first: "Eliud",
+last: "Kipchoge",
+country: "Kenya",
+title: "Elder of the Order of the Golden Heart of Kenya"
+}
+
+// Rather than destructuring INSIDE the function body
+// function print(person) {
+// const {first,last,title} = person;
+// console.log(`${first} ${last}, ${title}`)
+// }
+
+// We can unpack the values we want right in the parameter list:
+function print({first,last,title}) {
+console.log(`${first} ${last}, ${title}`)
+}
+
+
+const response = ['HTTP/1.1','200 OK','application/json']
+// Also works with array parameters:
+function parseResponse([protocol, statusCode, contentType]) {
+console.log(`Status: ${statusCode}`)
+}// Status: '200 OK'
+
+<!-- Adding function to the object  -->
+We have seen the built-in method like ex. toLowerCase(),slice(),indexOf etc. But
+here in the object we can write our own function to make it method.
+const math = {
+arr : [2,4,5,8,3,4,7],
+add : function (x,y){
+return x+y;
+},
+multiply : (x,y) => x*y
+}
+// math.arr
+(7) [2, 4, 5, 8, 3, 4, 7]
+math.add(4,8)
+12
+math.multiply(6,5)
+30
+
+<!-- keyword THIS -->
+this is the keyword in javascript. this refers to the window (global scope
+object in the browser)
+
+function sayHi(){
+console.log("Hi");
+// this refers to the window (global scope object in the browser)
+console.log(this);
+}//
+sayHi()
+Hi
+Window {window: Window, self: Window, document: document, name: '', location:
+Location, …
+
+const person ={
+first : "Yogesh",
+last: "Vishwakarma",
+nickName : 'Yogi',
+// here this is refers other property and method to this object.
+fullName : function(){
+console.log(`${this.first} ${this.last}`)
+},
+printBio :function(){
+const fullName = this.fullName();
+console.log(`${fullName} is a person`);
+}
+}
+
+<!-- ***********************DOM***************************  -->
+
+Selecting
+document.getElementbyId()
+document.getElementbyTagName()
+document.getElementbyClassName()
+document.querySelector() // it gives only the first match. here we can pass the
+in css style.
+element by element name like h1, p etc.
+className by .
+id by #
+document.querySelectorAll()
+
+// DOM (Document Object Model)
+
+// const allLi = document.querySelectorAll("li");
+
+// for(let li of allLi){
+// li.innerText = "We are champions";
+// li.innerHTML = "We are <b>Champions!!</b>"
+// }
+
+// const h1 = document.querySelector("h1");
+// h1.style.color = "teal";
+
+// const p = document.querySelector('#main');
+// p.style.backgroundColor = "aqua";
+// p.style.fontSize = "20px";
+
+// const allLi = document.querySelectorAll("li");
+// const colors = ['red','yellow','green','blue','teal','purple'];
+// wrong way
+// for( let li of allLi){
+// let i;
+// let idx = colors[i];
+// li.style.color = idx;
+// }
+// right way
+// allLi.forEach(function(li,i){
+// li.style.color = colors[i];
+// })
+
+/*
+const h1 = document.querySelector("h1");
+const compStyle= getComputedStyle(h1);
+//console.log(compStyle.color); // rgb(0, 0, 255)
+console.log(compStyle.color) // rgb(210, 105, 30) when we hover the cursur on h1.
+*/
+
+// // creating classList
+// const todo = document.querySelector('#todos, .todo');
+// todo.classList.toggle('done');
+/*
+
+// creating element
+const newh2 = document.createElement('h2');
+newh2.innerText ="I like veggies";
+newh2.classList.add('special');
+const section = document.querySelector('section');
+section.appendChild(newh2);
+
+// Make a new empty img element:
+const newImg = document.createElement('img');
+// Add a src:
+newImg.src =
+'https://images.unsplash.com/photo-1504006833117-8886a355efbf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80';
+// Change its width:
+newImg.style.width = "300px";
+//Add it to the end of the body:
+document.body.appendChild(newImg);
+
+
+// Create a new anchor tag
+const newLink = document.createElement('a');
+// Set its innerText:
+newLink.innerText = 'Mr. Bubz Video! CLICK MEEE';
+// Set its src:
+newLink.href = 'https://www.youtube.com/watch?v=QQNL83fhWJU';
+// Select the first paragraph:
+const firstP = document.querySelector('p');
+// Add the link as a child of the paragraph:
+firstP.appendChild(newLink);
+
+
+
+const parentUL = document.querySelector('ul');
+const newLI = document.createElement('li');
+newLI.innerText = 'I AM A NEW LIST ITEM!';
+
+//prepend will add newLI as the FIRST child of parentUL
+parentUL.prepend(newLI) //Doesn't work in IE!
+
+//We can also insert something BEFORE another element, using insertBefore.
+// First, select the element to insert before:
+const targetLI = document.querySelectorAll('li.todo')[2] //3rd li with class of 'todo'
+// To insert our new LI before targetLI...
+//parent.insertBefore(what to insert, where to insert)
+parentUL.insertBefore(newLI, targetLI);
+
+
+// USING removeChild()
+
+
+//Select the element you want to remove;
+const removeMe = document.querySelector('.special')
+//We call removeChild() on the parent element and pass in the element we want to remove:
+removeMe.parentElement.removeChild(removeMe)
+
+// USING THE NEWER REMOVE() METHOD - NO INTERNET EXPLORER SUPPORT!
+//Select the H1
+const h1 = document.querySelector('h1');
+h1.remove(); //REMOVE IT!
+*/
